@@ -1,0 +1,72 @@
+<footer>
+	<a class="footer-logo" href="/">
+		<img src="images/logo-horizontal.png" alt="Rogue Unit Logo" /></a
+	>
+	<a class="link" href="/contact">Fale com a gente!</a>
+	<div class="footer-icons">
+		<a target="_blank" href="https://www.roblox.com/pt/groups/10352289/rogueunit-gg#!/about"
+			><img src="icons/roblox.png" alt="Roblox" /></a
+		>
+		<a target="_blank" href="https://www.instagram.com/rogueunit.gg/"
+			><img src="icons/instagram.png" alt="Instagram" /></a
+		>
+		<a target="_blank" href="https://www.tiktok.com/@rogueunitgg"
+			><img src="icons/tiktok.png" alt="TikTok" /></a
+		>
+		<a target="_blank" href="https://br.linkedin.com/company/rogueunit"
+			><img src="icons/linkedin.png" alt="LinkedIn" /></a
+		>
+	</div>
+</footer>
+
+<style>
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.25rem 2rem;
+		background-color: var(--nav-background-color);
+		color: white;
+		position: relative;
+		height: 5em;
+		text-align: center;
+	}
+
+	.link {
+		flex-grow: 1;
+		text-align: center;
+		text-decoration: none;
+		color: white;
+		font-size: 16pt;
+	}
+
+	.footer-logo {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 20%;
+	}
+
+	.footer-logo img {
+		height: 100%;
+	}
+
+	.footer-icons {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-end;
+		justify-content: flex-end;
+		width: 20%;
+	}
+
+	.footer-icons img {
+		width: 24px;
+		height: 24px;
+	}
+
+	@media (max-width: 768px) {
+		.link {
+			display: none;
+		}
+	}
+</style>
