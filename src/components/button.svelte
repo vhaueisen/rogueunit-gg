@@ -6,7 +6,14 @@
 	export let type = 'button';
 </script>
 
-<a {href} target={blank ? '_blank' : ''} class:secondary class:btnClass {type}>
+<a
+	{href}
+	target={blank ? '_blank' : ''}
+	class:secondary
+	class:btnClass
+	{type}
+	data-sveltekit-preload-data
+>
 	<slot />
 </a>
 

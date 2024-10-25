@@ -6,11 +6,13 @@
 	<div class="callout-content">
 		<img src="/images/roblox-characters.png" alt="Roblox Characters" class="callout-image" />
 		<p>
-			Somos especializados na criação de games e <a href="#experiencias" class="highlight"
-				>experiências para marcas e comunidades</a
-			>. Com foco nas populares plataformas de jogos
-			<a href="https://roblox.com" class="highlight" target="_blank">Roblox</a> e Zepeto. O primeiro
-			e único estúdio brasileiro acelerado pela Roblox Corp (Roblox Accelerator Program Fall 2021).
+			Somos líder em criar experiências únicas no <a
+				href="https://roblox.com"
+				class="highlight"
+				target="_blank">Roblox</a
+			> para marcas que querem se conectar de forma impactante com o público jovem. Transformamos marcas
+			em parte ativa do universo de jogos com campanhas, itens e espaços personalizados que atraem e
+			fidelizam fãs.
 		</p>
 		<Button href="/work">SAIBA MAIS</Button>
 	</div>

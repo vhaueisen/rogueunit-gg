@@ -1,201 +1,208 @@
 :root {
-    font-family: Overpass;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: left;
-    
-    --nav-background-color: #292929;
-    --primary-color: #1d19ac;
-    --secondary-color: #c81e5c;
-    --tertiary-color: #005aff;
-    --quaternary-color: #fffdf8;
+	font-family: Overpass;
+	font-size: 1rem;
+	font-weight: 400;
+	text-align: left;
 
-    color: var(--quaternary-color);
+	--nav-background-color: #292929;
+	--primary-color: #1d19ac;
+	--secondary-color: #c81e5c;
+	--tertiary-color: #005aff;
+	--quaternary-color: #fffdf8;
+
+	color: var(--quaternary-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Rowdies", sans-serif;
-    font-weight: 400;
-    text-align: left;
-    line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Rowdies', sans-serif;
+	font-weight: 400;
+	text-align: left;
+	line-height: 1.2;
 }
 
 /* Tipografia base para dispositivos móveis */
 h1 {
-    font-size: 36px;
-    line-height: 44px;
+	font-size: 36px;
+	line-height: 44px;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
+	font-size: 32px;
+	line-height: 40px;
 }
 
 h3 {
-    font-size: 28px;
-    line-height: 34px;
+	font-size: 28px;
+	line-height: 34px;
 }
 
 h4 {
-    font-size: 24px;
-    line-height: 30px;
+	font-size: 24px;
+	line-height: 30px;
 }
 
 h5 {
-    font-size: 20px;
-    line-height: 24px;
+	font-size: 20px;
+	line-height: 24px;
 }
 
 h6 {
-    font-size: 18px;
-    line-height: 22px;
+	font-size: 18px;
+	line-height: 22px;
 }
 
 /* Tipografia para tablets */
 @media screen and (min-width: 768px) {
-    h1 {
-        font-size: 48px;
-        line-height: 58px;
-    }
-    
-    h2 {
-        font-size: 42px;
-        line-height: 50px;
-    }
-    
-    h3 {
-        font-size: 36px;
-        line-height: 44px;
-    }
-    
-    h4 {
-        font-size: 30px;
-        line-height: 36px;
-    }
-    
-    h5 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-    
-    h6 {
-        font-size: 20px;
-        line-height: 24px;
-    }
+	h1 {
+		font-size: 48px;
+		line-height: 58px;
+	}
+
+	h2 {
+		font-size: 42px;
+		line-height: 50px;
+	}
+
+	h3 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	h4 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	h5 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	h6 {
+		font-size: 20px;
+		line-height: 24px;
+	}
 }
 
 /* Tipografia para desktops */
 @media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 60px;
-        line-height: 72px;
-    }
-    
-    h2 {
-        font-size: 52px;
-        line-height: 62px;
-    }
-    
-    h3 {
-        font-size: 44px;
-        line-height: 54px;
-    }
-    
-    h4 {
-        font-size: 36px;
-        line-height: 44px;
-    }
-    
-    h5 {
-        font-size: 28px;
-        line-height: 34px;
-    }
-    
-    h6 {
-        font-size: 24px;
-        line-height: 30px;
-    }
+	h1 {
+		font-size: 60px;
+		line-height: 72px;
+	}
+
+	h2 {
+		font-size: 52px;
+		line-height: 62px;
+	}
+
+	h3 {
+		font-size: 44px;
+		line-height: 54px;
+	}
+
+	h4 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	h5 {
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	h6 {
+		font-size: 24px;
+		line-height: 30px;
+	}
 }
 
 /* Tipografia para telas grandes */
 @media screen and (min-width: 1440px) {
-    h1 {
-        font-size: 90px;
-        line-height: 108px;
-    }
-    
-    h2 {
-        font-size: 67px;
-        line-height: 80px;
-    }
-    
-    h3 {
-        font-size: 50px;
-        line-height: 60px;
-    }
-    
-    h4 {
-        font-size: 37px;
-        line-height: 44px;
-    }
-    
-    h5 {
-        font-size: 28px;
-        line-height: 34px;
-    }
-    
-    h6 {
-        font-size: 21px;
-        line-height: 25px;
-    }
+	h1 {
+		font-size: 90px;
+		line-height: 108px;
+	}
+
+	h2 {
+		font-size: 67px;
+		line-height: 80px;
+	}
+
+	h3 {
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	h4 {
+		font-size: 37px;
+		line-height: 44px;
+	}
+
+	h5 {
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	h6 {
+		font-size: 21px;
+		line-height: 25px;
+	}
 }
 
-a, a:visited {
-    font-family: "Rowdies", sans-serif;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--tertiary-color);
-    text-decoration: none;
-    transition: 0.3s text-decoration ease-in-out;
+a,
+a:visited {
+	font-family: 'Rowdies', sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	color: var(--tertiary-color);
+	text-decoration: none;
+	transition: 0.3s text-decoration ease-in-out;
 }
 
 .title {
-    text-align: center;
-    font-family: Overpass;
-    font-size: 20px;
-    font-weight: 400;
+	text-align: center;
+	font-family: Overpass;
+	font-size: 20px;
+	font-weight: 400;
 }
 
 /* Ajuste da tipografia do título em diferentes telas */
 @media screen and (min-width: 768px) {
-    .title {
-        font-size: 24px;
-    }
+	.title {
+		font-size: 24px;
+	}
 }
 
 @media screen and (min-width: 1024px) {
-    .title {
-        font-size: 28px;
-    }
+	.title {
+		font-size: 28px;
+	}
 }
 
 .title a {
-    text-align: center;
-    font-family: Overpass;
-    font-size: inherit;
-    font-weight: 400;
+	text-align: center;
+	font-family: Overpass;
+	font-size: inherit;
+	font-weight: 400;
 }
 
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 body {
-    background-color: #111111;
+	background-color: #111111;
 }

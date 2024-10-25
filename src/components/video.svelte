@@ -1,18 +1,15 @@
-<!-- Video component -->
-<script lang="ts">
-	export let src: string = '';
-</script>
-
 <div class="video">
-	<iframe
-		width="560"
-		height="315"
-		{src}
-		title="YouTube video player"
-		frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen
-	></iframe>
+		<video
+			autoplay
+			loop
+			poster="/images/rogue-teaser-poster.png"
+			muted
+			playsinline
+			>
+			<source
+				src="/videos/rogue-teaser-video.mp4"
+			/>
+		</video>
 </div>
 
 <style>
@@ -21,5 +18,13 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: 1em;
+		width: 100%;
+		max-width: 1280px;
+		margin: auto;
+	}
+
+	video {
+		width: 100%;
+		object-fit: cover;
 	}
 </style>

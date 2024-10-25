@@ -35,7 +35,7 @@
 		color: white;
 		font-weight: bold;
 		width: 80%;
-		max-width: 500px;
+		max-width: 600px;
 		padding: 1rem;
 		border-radius: 5px;
 		margin-top: 2rem;
@@ -67,14 +67,14 @@
 	}
 
 	.btn-row {
-		margin-top: 1rem;
-		text-align: center;
+		margin: 1rem 4em;
+		text-align: right;
 	}
 
 	@media screen and (min-width: 768px) {
 		.container {
 			flex-direction: row;
-			justify-content: center;
+			justify-content: end;
 			align-items: flex-start;
 		}
 
@@ -98,10 +98,6 @@
 		.img-container {
 			width: 50%;
 			margin-top: 0;
-		}
-
-		.btn-row {
-			text-align: left;
 		}
 	}
 </style>

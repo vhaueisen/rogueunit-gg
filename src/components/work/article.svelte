@@ -1,29 +1,32 @@
 <script lang="ts">
 	import { draw } from 'svelte/transition';
 	import { linear } from 'svelte/easing';
+	import { onDestroy } from 'svelte';
 
 	let drawSvg = false;
+	let observer: IntersectionObserver;
+
 	let sections = [
 		{
 			title: 'Integrações de Marca',
-			subtitle: 'Title Here',
+			subtitle: 'Engaje uma Nova Geração de Fãs',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+				'A integração de marcas em jogos na Roblox oferece uma oportunidade inovadora para se conectarem com as novas gerações de forma imersiva e interativa. No universo do Roblox, a média diária de engajamento gira em torno de 2,3 horas por usuário e as marcas podem criar ambientes exclusivos, lançar itens virtuais e promover eventos temporários ou permanentes para engajar o público de forma natural. Esse tipo de experiência transforma o branding em algo vivo e personalizável, que acompanha os jogadores durante suas jornadas digitais​.',
 			image: '/images/roblox-characters.png',
 			alt: 'Alguma legenda aqui'
 		},
 		{
 			title: 'UGC',
-			subtitle: 'Definição',
+			subtitle: 'Impulsione sua Marca com Itens Virtuais',
 			description:
-				'Conhecidos como UGC (do inglês, Conteúdo Gerado pelo Usuário), esses são conteúdos criados e publicados em plataformas online e podem ser usados como ativações para marcas promoverem-se dentro do jogo, fazendo com que a comunidade cresça e adquira itens que representem suas preferências. Imagine camisetas de bandas, times de futebol ou qualquer outro item que ressoe com a identidade da sua marca.',
+				'Integrar UGC ao universo da sua marca no é uma estratégia poderosa para fortalecer laços autênticos com o público jovem. No Roblox, usuários têm a oportunidade de personalizar e criar itens que representam sua individualidade, transformando-se em verdadeiros embaixadores da marca. Ao permitir que os consumidores gerem conteúdo em torno de seus produtos, sua marca se torna uma parte ativa e significativa de suas experiências diárias, impulsionando engajamento e visibilidade de maneira orgânica.',
 			image: '/images/roblox-characters.png',
 			alt: 'Alguma legenda aqui'
 		}
 	];
 
 	function actionWhenInViewport(e: Element) {
-		const observer = new IntersectionObserver((entries) => {
+		observer = new IntersectionObserver((entries) => {
 			if (entries[0].isIntersecting) {
 				drawSvg = true;
 				observer.disconnect();
@@ -31,6 +34,12 @@
 		}, {});
 		observer.observe(e);
 	}
+
+	onDestroy(() => {
+		if (observer) {
+			observer.disconnect();
+		}
+	});
 </script>
 
 <div class="container">
@@ -154,7 +163,8 @@
 			padding: 1rem;
 		}
 
-		.section, .section:nth-child(odd) {
+		.section,
+		.section:nth-child(odd) {
 			flex-direction: column;
 			margin: 2em auto;
 		}

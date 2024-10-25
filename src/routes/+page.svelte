@@ -4,7 +4,7 @@
 	import ScrollIndicator from '../components/scroll-indicator.svelte';
 	import Carousel from '../components/home/news-carousel.svelte';
 	import Invite from '../components/home/invite.svelte';
-	import Footer from '../components/footer.svelte';
+	import Video from '../components/video.svelte';
 </script>
 
 <Header title="O próximo Level da sua marca no mundo digital">
@@ -19,12 +19,10 @@
 
 <ScrollIndicator />
 
-<!-- <Video src={video} /> -->
+<Video />
 
 <Callout />
 
 <Carousel />
 
 <Invite />
-
-<Footer />

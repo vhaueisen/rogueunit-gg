@@ -7,24 +7,35 @@
 
 	let slides = [
 		{
-			title: 'Experiência 1',
-			subtitle: 'Subtítulo 1',
-			image: '/images/roblox-characters.png',
-			alt: 'Imagem de personagens do Roblox.'
+			title: 'LOUD',
+			subtitle: 'Liga Loud: Lendas do Futebol',
+			image: '/images/loud-league.png',
+			alt: 'Thumbnail da Liga Loud: Lendas do Futebol.',
+			link: 'https://www.loud.gg/liga-loud/',
+			branded: true
 		},
 		{
-			title: 'Experiência 2',
-			subtitle: 'Subtítulo 2',
-			image: '/images/roblox-characters.png',
-			alt: 'Imagem de personagens do Roblox.'
+			title: 'SPORTV',
+			subtitle: 'SporTV Land',
+			image: '/images/sportv-land.jpg',
+			alt: 'Thumbnail do SporTV Land.',
+			link: 'https://www.sportv.com/land',
+			branded: true
+		},
+		{
+			title: 'ROGUE UNIT',
+			subtitle: 'Hyperlight Wings',
+			image: '/images/hyperlight-wings.png',
+			alt: 'Thumbnail do Hyperlight Wings.',
+			link: 'https://www.rogueunit.com/hyperlight-wings'
 		}
 	];
 
 	function reset() {
 		clearInterval(interval);
-		 interval = setInterval(() => {
-		 	nextSlide();
-		 }, 5000);
+		interval = setInterval(() => {
+			nextSlide();
+		}, 5000);
 	}
 
 	onMount(() => {
@@ -58,10 +69,12 @@
 						transition:fly={{ x: currentSlide > previousIndex ? 500 : -500, duration: 500 }}
 						style="background-image: url({slide.image});"
 					>
-						<div class="brand-experience">Brand Experience</div>
+						<div class="experience-type" class:branded={slide.branded}>
+							{slide.branded ? 'Experiência de Marca' : 'Experiência Proprietária'}
+						</div>
 						<div class="slide-content">
 							<div class="title">{slide.title}</div>
-							<div class="subtitle">{slide.subtitle}</div>
+							<div class="subtitle"><a href={slide.link} target="_blank">{slide.subtitle}</a></div>
 						</div>
 					</div>
 				{/if}
@@ -153,16 +166,20 @@
 		background-color: #000;
 	}
 
-	.brand-experience {
+	.experience-type {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-color: var(--secondary-color);
+		background-color: var(--primary-color);
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 0 5px 0 5px;
 		padding: 8px 24px 8px 24px;
 		font-size: 1rem;
+	}
+
+	.experience-type.branded {
+		background-color: var(--secondary-color);
 	}
 
 	.experience-title {
@@ -217,11 +234,20 @@
 	.subtitle {
 		font-size: 1rem;
 		margin-top: 0.25rem;
-		margin: 1em 0 2em 0;
+		margin: 0.5em 0 2em 0;
 		margin-left: 32px;
 		font-family: Overpass;
 		font-size: 24px;
 		font-weight: 700;
 		text-align: left;
+	}
+
+	.subtitle a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.subtitle a:hover {
+		text-decoration: underline;
 	}
 </style>

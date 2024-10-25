@@ -1,7 +1,7 @@
 <script>
 	import Navbar from '../components/navbar.svelte';
 	import './../css/styles.css';
-	// import './../css/animations.css';
+	import Footer from '../components/footer.svelte';
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,3 +17,5 @@
 
 <Navbar />
 <slot />
+
+<Footer	/>

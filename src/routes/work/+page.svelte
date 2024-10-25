@@ -14,4 +14,3 @@
 <Carousel />
 <Article />
 <Team />
-<Footer />

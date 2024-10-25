@@ -1,12 +1,14 @@
 <script>
 	import { enhance } from '$app/forms';
 	import Footer from '../../components/footer.svelte';
+	import ScrollIndicator from '../../components/scroll-indicator.svelte';
 	/** @type {import('./$types').ActionData} */
 	export let form;
 </script>
 
 <div class="contact-title">
 	<h4>Como podemos te ajudar hoje?</h4>
+	<!-- <ScrollIndicator /> -->
 </div>
 
 {#if form?.valid !== true}
@@ -22,27 +24,29 @@
 		<div>
 			<div>
 				<label for="name">Nome:</label>
-				<input type="text" name="name" placeholder="Fulano da Silva" required/>
+				<input type="text" name="name" placeholder="Fulano da Silva" required />
 			</div>
 			<div>
 				<label for="email">E-mail:</label>
-				<input type="email" name="email" placeholder="example@example.com" required/>
+				<input type="email" name="email" placeholder="example@example.com" required />
 			</div>
 		</div>
 
 		<div>
 			<label for="message">Mensagem:</label>
-			<textarea name="message" placeholder="Escreva sua mensagem aqui :)" rows="8" required></textarea>
+			<textarea name="message" placeholder="Escreva sua mensagem aqui :)" rows="8" required
+			></textarea>
 			<button>Enviar</button>
 		</div>
 	</form>
 {/if}
+
 {#if form?.valid === true}
-	<p class="success">Formulário enviado com sucesso!</p>
+	<div class="speech-bubble">
+		Seu contato foi enviado e logo será tratado por nossa equipe!<br />:)
+	</div>
 {/if}
 {#if form?.valid === false}<p class="error">{form.text}</p>{/if}
-
-<Footer />
 
 <style>
 	.contact-title {
@@ -70,15 +74,13 @@
 	}
 
 	.error {
+		text-align: center;
+		font-size: large;
+		margin: auto;
+		width: 100%;
+		max-width: 1280px;
+		padding-bottom: 2em;
 		color: red;
-		text-align: center;
-		font-size: large;
-	}
-
-	.success {
-		color: green;
-		text-align: center;
-		font-size: large;
 	}
 
 	button {
@@ -101,9 +103,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10%;
-		margin: auto;
 		align-items: flex-start;
 		justify-content: center;
+		margin: auto;
 		max-width: 1280px;
 		padding: 2em;
 	}
@@ -146,9 +148,48 @@
 		color: #888;
 	}
 
+	.speech-bubble {
+		position: relative;
+		background: #292929;
+		color: white;
+		font-weight: bold;
+		width: 80%;
+		max-width: 400px;
+		padding: 1rem;
+		border-radius: 5px 5px 5px 0px;
+		margin: 5em 0;
+		text-align: center;
+		align-self: center;
+		justify-self: center;
+		font-size: 24px;
+	}
+
+	.speech-bubble::after {
+		content: '';
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 20px solid #292929;
+		border-right: 20px solid transparent;
+	}
+
+	@media screen and (min-width: 768px) {
+		.speech-bubble {
+			width: 50%;
+			margin-right: 2rem;
+			margin-top: 5em;
+		}
+	}
+
 	@media screen and (min-width: 600px) {
 		form {
 			flex-direction: row;
+		}
+
+		.error {
+			text-align: left;
 		}
 	}
 </style>
