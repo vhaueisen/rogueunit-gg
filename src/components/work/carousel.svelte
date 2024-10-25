@@ -16,9 +16,9 @@
 		},
 		{
 			title: 'SPORTV',
-			subtitle: 'SporTV Land',
+			subtitle: 'Sportv Land',
 			image: '/images/sportv-land.jpg',
-			alt: 'Thumbnail do SporTV Land.',
+			alt: 'Thumbnail do Sportv Land.',
 			link: 'https://www.sportv.com/land',
 			branded: true
 		},

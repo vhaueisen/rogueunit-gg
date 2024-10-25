@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Button from './../components/button.svelte';
 	import { page } from '$app/stores';
-	import Footer from '../components/footer.svelte';
 </script>
 
 <div class="content">

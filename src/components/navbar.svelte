@@ -29,7 +29,7 @@
 	<div class="nav-links">
 		{#each Object.keys(links) as link}
 			<li>
-				<a href={link} class:active={path == link} data-sveltekit-preload-data>
+				<a href={link} class:active={path == link}>
 					{links[link]}
 				</a>
 				<span>&nbsp;</span>

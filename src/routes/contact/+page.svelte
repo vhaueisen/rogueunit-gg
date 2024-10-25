@@ -1,10 +1,41 @@
 <script>
 	import { enhance } from '$app/forms';
-	import Footer from '../../components/footer.svelte';
 	import ScrollIndicator from '../../components/scroll-indicator.svelte';
 	/** @type {import('./$types').ActionData} */
 	export let form;
 </script>
+
+<svelte:head>
+	<title>Entre em Contato | Rogue Unit</title>
+
+	<meta
+		name="description"
+		content="Entre em contato com a Rogue Unit, o estúdio líder em experiências no Roblox. Solicite informações sobre nossos serviços de criação de ambientes digitais, campanhas interativas e branding no universo Roblox. Estamos prontos para transformar sua marca!"
+	/>
+	<meta
+		name="keywords"
+		content="contato Rogue Unit, estúdio Roblox Brasil, marketing digital, branding no metaverso, experiências Roblox, campanhas interativas, contato para parcerias, estúdio de jogos, metaverso e marcas"
+	/>
+
+	<!-- Meta Tags para Open Graph (Facebook, LinkedIn) -->
+	<meta property="og:title" content="Entre em Contato com a Rogue Unit" />
+	<meta
+		property="og:description"
+		content="Fale com a Rogue Unit e descubra como podemos criar experiências inovadoras para sua marca no Roblox."
+	/>
+	<meta property="og:image" content="images/contact-background.jpg" />
+	<meta property="og:url" content="https://www.rogueunit.gg/contact" />
+	<meta property="og:type" content="website" />
+
+	<!-- Meta Tags para Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Entre em Contato com a Rogue Unit" />
+	<meta
+		name="twitter:description"
+		content="Fale com a Rogue Unit para levar sua marca ao próximo nível no universo do Roblox."
+	/>
+	<meta name="twitter:image" content="images/contact-background.jpg" />
+</svelte:head>
 
 <div class="contact-title">
 	<h4>Como podemos te ajudar hoje?</h4>
