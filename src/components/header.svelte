@@ -17,4 +17,10 @@
 	.title h1 {
 		text-align: center;
 	}
+
+	@media (max-width: 768px) {
+		.title {
+			padding: 0 1em;
+		}
+	}
 </style>

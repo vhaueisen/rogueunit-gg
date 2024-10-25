@@ -65,7 +65,7 @@
 
 		<div>
 			<label for="message">Mensagem:</label>
-			<textarea name="message" placeholder="Escreva sua mensagem aqui :)" rows="8" required
+			<textarea name="message" placeholder="Escreva sua mensagem aqui :)" rows="7" required
 			></textarea>
 			<button>Enviar</button>
 		</div>
@@ -116,12 +116,11 @@
 
 	button {
 		display: inline-block;
-		padding: 0.8rem 2rem;
+		padding: 1em 3em;
 		background-color: var(--tertiary-color);
 		color: var(--quaternary-color);
 		text-decoration: none;
 		font-weight: bold;
-		border-radius: 5px;
 		transition: background-color 0.3s ease;
 		font-family: Overpass;
 		font-size: 18px;
@@ -136,9 +135,9 @@
 		gap: 10%;
 		align-items: flex-start;
 		justify-content: center;
-		margin: auto;
 		max-width: 1280px;
 		padding: 2em;
+		margin: 3em auto;
 	}
 
 	label {
@@ -158,6 +157,9 @@
 		border: 1px solid #4d4d4d;
 		margin: 1em 0em 2em 0em;
 		color: var(--quaternary-color);
+		font-family: Overpass;
+		font-size: 18px;
+		font-weight: 400;
 	}
 
 	input:focus,

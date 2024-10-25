@@ -45,7 +45,7 @@
 	.speech-bubble::after {
 		content: '';
 		position: absolute;
-		bottom: -20px;
+		bottom: -19px;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 0;
@@ -68,7 +68,7 @@
 
 	.btn-row {
 		margin: 1rem 4em;
-		text-align: right;
+		text-align: center;
 	}
 
 	@media screen and (min-width: 768px) {
@@ -98,6 +98,15 @@
 		.img-container {
 			width: 50%;
 			margin-top: 0;
+		}
+
+		.btn-row {
+			position: absolute;
+			right: 0;
+		}
+
+		.speech-bubble {
+			padding-bottom: 3em;
 		}
 	}
 </style>

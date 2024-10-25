@@ -33,11 +33,14 @@
 	}
 
 	.link {
-		flex-grow: 1;
 		text-align: center;
 		text-decoration: none;
 		color: white;
 		font-size: 16pt;
+	}
+
+	.link:hover {
+		text-decoration: underline;
 	}
 
 	.footer-logo {
@@ -67,6 +70,11 @@
 	@media (max-width: 768px) {
 		.link {
 			display: none;
+		}
+
+		footer {
+			padding: 0.5em 0.5em;
+			height: 3.5em;
 		}
 	}
 </style>

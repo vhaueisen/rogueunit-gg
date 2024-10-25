@@ -138,7 +138,6 @@
 		position: relative;
 		user-select: none;
 		margin: 2rem auto;
-		border-radius: 5px;
 	}
 
 	.header {

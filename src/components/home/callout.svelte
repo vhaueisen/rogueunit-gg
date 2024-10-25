@@ -21,19 +21,19 @@
 
 <style>
 	.callout-section {
-		padding: 2rem;
+		padding-top: 3em;
 		text-align: center;
 		color: white;
 		position: relative;
 		overflow: hidden;
 		max-width: 1280px;
-		margin: -5em auto 0 auto;
+		margin: -1em auto 5em auto;
 	}
 
 	.callout-content {
+		width: 80%;
 		max-width: 600px;
 		margin: 0 auto;
-		padding: 2rem;
 		border-radius: 10px;
 		position: relative;
 		z-index: 1;
@@ -41,6 +41,7 @@
 
 	.callout-image {
 		width: 100%;
+		max-width: 400px;
 		margin-bottom: 1rem;
 	}
 
@@ -48,6 +49,7 @@
 		font-size: 1.1rem;
 		line-height: 1.6;
 		color: var(--quaternary-color);
+		margin-bottom: 2em;
 	}
 
 	.highlight {
@@ -62,7 +64,7 @@
 	.trapezoid {
 		position: absolute;
 		top: 0;
-		bottom: -20px;
+		bottom: 0;
 		left: 0;
 		right: 0;
 		background: linear-gradient(
@@ -70,7 +72,7 @@
 			rgba(255, 255, 248, 0.3) -118.68%,
 			rgba(255, 255, 248, 0) 91.43%
 		);
-		clip-path: polygon(0 0, 100% 0, 60% 88%, 40% 88%);
+		clip-path: polygon(0 0, 100% 0, 59.5% 100%, 40.5% 100%);
 		z-index: 0;
 	}
 
@@ -79,10 +81,6 @@
 	}
 
 	@media (max-width: 768px) {
-		.callout-content {
-			padding: 1em;
-		}
-
 		.callout-image {
 			width: 80%;
 		}
@@ -96,7 +94,7 @@
 		}
 
 		.trapezoid {
-			clip-path: polygon(0 0, 100% 0, 70% 88%, 30% 88%);
+			clip-path: polygon(0 0, 100% 0, 73% 100%, 27% 100%);
 		}
 	}
 </style>

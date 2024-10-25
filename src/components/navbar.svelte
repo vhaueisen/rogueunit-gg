@@ -136,5 +136,10 @@
 		.nav-icons {
 			display: none;
 		}
+
+		.navbar {
+			padding: 0.5em 0.5em;
+			height: 3.5em;
+		}
 	}
 </style>

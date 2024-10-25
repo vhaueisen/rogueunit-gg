@@ -65,8 +65,8 @@
 			{/if}
 		</svg>
 	</div>
-	{#each sections as section}
-		<div class="section">
+	{#each sections as section, index}
+		<div class="section" class:odd={index % 2 == 0}>
 			<div class="image-wrapper">
 				<img src={section.image} alt={section.alt} class="image" />
 			</div>
@@ -83,7 +83,6 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
 		padding: 2rem;
 		color: white;
 		font-family: Arial, sans-serif;
@@ -101,7 +100,11 @@
 		width: 80%;
 		height: 100%;
 		z-index: 2;
-		margin: 5em auto;
+		margin: 3em auto 5.2em auto;
+	}
+
+	.section.odd {
+		margin-top: 8em;
 	}
 
 	.section:nth-child(odd) {
@@ -166,11 +169,11 @@
 		.section,
 		.section:nth-child(odd) {
 			flex-direction: column;
-			margin: 2em auto;
+			margin: 4em auto;
 		}
 
 		.image-wrapper {
-			width: 100%;
+			width: 80%;
 		}
 
 		.text-wrapper {
@@ -183,6 +186,10 @@
 
 		.section {
 			margin: 0 auto;
+		}
+
+		.section.odd {
+			margin-top: 3em;
 		}
 	}
 </style>

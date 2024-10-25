@@ -2,8 +2,6 @@
 	import Navbar from '../components/navbar.svelte';
 	import './../css/styles.css';
 	import Footer from '../components/footer.svelte';
-
-	export const prerender = true;
 </script>
 
 <svelte:head>
@@ -30,6 +28,7 @@
 </svelte:head>
 
 <Navbar />
+
 <slot />
 
 <Footer />

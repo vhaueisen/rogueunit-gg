@@ -21,12 +21,12 @@
 	a,
 	a:visited {
 		display: inline-block;
-		padding: 0.8rem 2rem;
+		padding: 1em 2em;
+		margin: 0;
 		background-color: var(--tertiary-color);
 		color: var(--quaternary-color);
 		text-decoration: none;
 		font-weight: bold;
-		border-radius: 5px;
 		transition: background-color 0.3s ease;
 		font-family: Overpass;
 		font-size: 18px;

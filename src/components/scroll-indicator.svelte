@@ -12,14 +12,14 @@
 	}
 
 	.scroll-indicator .line {
-		width: 2px;
-		height: 120px;
+		width: 7px;
+		height: 90px;
 		background-color: #555;
 	}
 
 	.diamond {
-		width: 0.8em;
-		height: 0.8em;
+		width: 24px;
+		height: 24px;
 		background-color: #555;
 		transform: rotate(45deg);
 	}
