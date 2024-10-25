@@ -3,19 +3,19 @@
 		{
 			name: 'Daniel Piassi',
 			role: 'CIO e Roblox Tech Lead',
-			image: 'icons/Icon_Daniel.png',
+			image: '/icons/Icon_Daniel.png',
 			linkedin: 'https://www.linkedin.com/in/dpiassi'
 		},
 		{
 			name: 'Filipe Lucas',
 			role: 'CEO e Diretor Criativo',
-			image: 'icons/Icon_Filipe.png',
+			image: '/icons/Icon_Filipe.png',
 			linkedin: 'https://www.linkedin.com/in/filipelucasart'
 		},
 		{
 			name: 'Vitor Ruas',
 			role: 'CTO',
-			image: 'icons/Icon_Vitor.png',
+			image: '/icons/Icon_Vitor.png',
 			linkedin: 'https://www.linkedin.com/in/vitor-ruas'
 		}
 	];
@@ -47,17 +47,21 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		margin-bottom: 64px;
 	}
 
 	.content {
-		margin-top: 2em;
+		padding-bottom: 64px;
+		margin-top: -100px;
+		padding-top: 108px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		color: white;
 		position: relative;
 		gap: 2em;
+		background: url('/images/dark-texture.jpg') no-repeat center center / cover;
+		width: 100%;
+		justify-content: center;
 	}
 
 	.team-data,
@@ -94,6 +98,7 @@
 		border-radius: 5px;
 		margin-top: 2rem;
 		margin-bottom: 3rem;
+		z-index: 2;
 	}
 
 	.speech-bubble::after {
@@ -118,7 +123,7 @@
 	img {
 		width: 100%;
 		height: auto;
-        margin: 2em auto;
+		margin: 2em auto;
 	}
 
 	.img-container a {

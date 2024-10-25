@@ -23,7 +23,7 @@
 		property="og:description"
 		content="A Rogue Unit cria projetos inovadores no Roblox para marcas que buscam se conectar com o público jovem. Descubra nossos projetos e como podemos transformar sua marca em uma experiência interativa."
 	/>
-	<meta property="og:image" content="images/invite-background.png" />
+	<meta property="og:image" content="/images/invite-background.png" />
 	<meta property="og:url" content="https://www.rogueunit.gg" />
 	<meta property="og:type" content="website" />
 
@@ -33,7 +33,7 @@
 		name="twitter:description"
 		content="Transformamos marcas em experiências digitais no Roblox. Conheça nossos projetos com LOUD e Sportv."
 	/>
-	<meta name="twitter:image" content="images/invite-background.png" />
+	<meta name="twitter:image" content="/images/invite-background.png" />
 </svelte:head>
 
 <Header title="O próximo Level da sua marca no mundo digital">

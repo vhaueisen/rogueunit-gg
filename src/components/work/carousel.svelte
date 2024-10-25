@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	let currentSlide = 1;
-	let previousIndex = 0;
-	let interval: any;
 
 	let slides = [
 		{
@@ -31,6 +28,22 @@
 		}
 	];
 
+	let currentSlide = 1;
+	let previousIndex = 0;
+	let interval: any;
+
+	function nextSlide() {
+		previousIndex = currentSlide;
+		currentSlide = (currentSlide + 1) % slides.length;
+		reset();
+	}
+
+	function previousSlide() {
+		previousIndex = currentSlide;
+		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+		reset();
+	}
+
 	function reset() {
 		clearInterval(interval);
 		interval = setInterval(() => {
@@ -44,17 +57,9 @@
 		return () => clearInterval(interval);
 	});
 
-	function nextSlide() {
-		previousIndex = currentSlide;
-		currentSlide = (currentSlide + 1) % slides.length;
-		reset();
-	}
-
-	function previousSlide() {
-		previousIndex = currentSlide;
-		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-		reset();
-	}
+	onDestroy(() => {
+		clearInterval(interval);
+	});
 </script>
 
 <div class="container">
@@ -93,7 +98,7 @@
 <style>
 	.container {
 		width: 100%;
-		background: #222;
+		background: url('/images/light-dark-texture.jpg') no-repeat center center / cover;
 		position: relative;
 		padding-top: 3em;
 		padding-bottom: 3em;
@@ -103,14 +108,16 @@
 		display: flex;
 		align-items: center;
 		border-radius: 10px;
-		height: 450px;
+		height: 70vw;
+		max-height: 475px;
 		overflow: hidden;
 	}
 
 	.slide {
 		position: absolute;
-		width: 100%;
-		height: 400px;
+		width: calc(100% - 2em);
+		height: 60vw;
+		max-height: 420px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -119,6 +126,7 @@
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 		background-size: cover;
 		background-position: center;
+		margin-left: 1em;
 	}
 
 	.navigation {

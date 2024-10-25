@@ -24,6 +24,15 @@
 			linkText: 'Leia mais'
 		},
 		{
+			image: '/news/cabeca-de-lab.jpg',
+			alt: 'Foto dos participantes deste Podcast',
+			quote: 'Desenvolvimento de jogos no Roblox Studio',
+			description:
+				'Neste episódio, mergulharemos no universo do desenvolvimento de jogos no Roblox. Conversaremos sobre o impacto da linguagem Lua e como otimizar jogos para dispositivos móveis. Nossos convidados compartilham suas experiências com a plataforma Roblox Studio, além de compartilharem dicas valiosas para jovens criadores.',
+			link: 'https://open.spotify.com/episode/4YYmjiyVx2tVAQQQSA9V7W',
+			linkText: 'Escutar'
+		},
+		{
 			image: '/news/loud-league.png',
 			alt: 'Foto da Liga Loud: Lendas do Futebol',
 			quote: 'Rogue Unit é a responsável pela estreia da Loud no Roblox',
@@ -98,9 +107,9 @@
 			<div class="quote">"{pages[currentPage].quote}"</div>
 			<div>{pages[currentPage].description}</div>
 			<div class="link">
-			<a href={pages[currentPage].link} class="button" target="_blank"
-				>{pages[currentPage].linkText}</a
-			>
+				<a href={pages[currentPage].link} class="button" target="_blank"
+					>{pages[currentPage].linkText}</a
+				>
 			</div>
 		</div>
 	</div>
@@ -120,7 +129,7 @@
 	.carousel {
 		width: calc(100% - 73px);
 		max-width: 800px;
-		background-color: var(--tertiary-color);
+		background: url('/images/blue-texture.jpg') no-repeat center center / cover;
 		color: var(--quaternary-color);
 		display: flex;
 		flex-direction: column;
@@ -183,14 +192,14 @@
 		display: flex;
 		padding-bottom: 1em;
 	}
-	
+
 	.button {
 		background-color: var(--secondary-color);
 		color: var(--quaternary-color);
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
 		text-decoration: none;
-		align-self: flex-end!important;
+		align-self: flex-end !important;
 	}
 
 	.pagination {

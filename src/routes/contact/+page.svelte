@@ -23,7 +23,7 @@
 		property="og:description"
 		content="Fale com a Rogue Unit e descubra como podemos criar experiências inovadoras para sua marca no Roblox."
 	/>
-	<meta property="og:image" content="images/contact-background.jpg" />
+	<meta property="og:image" content="/images/contact-background.jpg" />
 	<meta property="og:url" content="https://www.rogueunit.gg/contact" />
 	<meta property="og:type" content="website" />
 
@@ -85,7 +85,7 @@
 		font-weight: bold;
 		text-align: center;
 		height: 600px;
-		background: url('images/contact-background.jpg') no-repeat center 70% / 100%;
+		background: url('/images/contact-background.jpg') no-repeat center 70% / 100%;
 		background-size: cover;
 		display: flex;
 		align-items: center;

@@ -24,7 +24,7 @@
 </script>
 
 <nav class="navbar">
-	<a class="nav-logo" href="/"> <img src="images/logo-horizontal.png" alt="Rogue Unit Logo" /></a>
+	<a class="nav-logo" href="/"> <img src="/images/logo-horizontal.png" alt="Rogue Unit Logo" /></a>
 
 	<div class="nav-links">
 		{#each Object.keys(links) as link}
@@ -40,7 +40,7 @@
 	<div class="nav-icons">
 		{#each Object.keys(icons) as icon}
 			<a target="_blank" href={icons[icon]}>
-				<img src={`icons/${icon}.png`} alt={icon} />
+				<img src={`/icons/${icon}.png`} alt={icon} />
 			</a>
 		{/each}
 	</div>

@@ -12,8 +12,8 @@
 	<meta name="geo.placename" content="São Paulo" />
 	<meta name="geo.position" content="-23.5672;-46.6881" />
 	<meta name="ICBM" content="-23.5672, -46.6881" />
-	<link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png" />
-	<link rel="icon" href="path/to/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+	<link rel="icon" href="favicon.png" type="image/x-icon" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />

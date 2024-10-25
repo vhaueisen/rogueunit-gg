@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<div class="img-container">
-		<img src="images/invite-background.png" alt="Convite" />
+		<img src="/images/invite-background.png" alt="Convite" />
 	</div>
 </div>
 
