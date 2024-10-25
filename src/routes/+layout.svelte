@@ -14,7 +14,7 @@
 	<meta name="geo.placename" content="São Paulo" />
 	<meta name="geo.position" content="-23.5672;-46.6881" />
 	<meta name="ICBM" content="-23.5672, -46.6881" />
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+	<link rel="apple-touch-icon" sizes="512x512" href="/images/rogue-logo-512.jpg" />
 	<link rel="icon" href="favicon.png" type="image/x-icon" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />

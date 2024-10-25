@@ -34,7 +34,7 @@
 		name="twitter:description"
 		content="Fale com a Rogue Unit para levar sua marca ao próximo nível no universo do Roblox."
 	/>
-	<meta name="twitter:image" content="images/contact-background.jpg" />
+	<meta name="twitter:image" content="/images/contact-background.jpg" />
 </svelte:head>
 
 <div class="contact-title">
