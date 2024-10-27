@@ -67,7 +67,6 @@
 	}
 
 	.btn-row {
-		margin: 1rem 4em;
 		text-align: center;
 	}
 
@@ -84,15 +83,18 @@
 			margin-top: 5em;
 		}
 
+		.btn-row {
+			margin: 1rem 4em;
+		}
+
 		.speech-bubble::after {
-			top: 50%;
+			top: 100%;
 			bottom: auto;
-			left: 100%;
+			left: 8%;
 			transform: translateY(-50%);
 			border-top: 20px solid transparent;
-			border-bottom: 20px solid transparent;
-			border-left: 20px solid var(--secondary-color);
-			border-right: none;
+			border-bottom: 40px solid transparent;
+			border-right: 60px solid var(--secondary-color);
 		}
 
 		.img-container {

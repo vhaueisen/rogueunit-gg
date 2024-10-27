@@ -115,7 +115,7 @@
 	}
 
 	.img-container {
-		width: 100%;
+		width: 80%;
 		max-width: 1200px;
 		display: flex;
 	}
@@ -143,6 +143,10 @@
 
 		.content {
 			flex-direction: row;
+		}
+
+		.img-container {
+			width: 100%;
 		}
 	}
 </style>

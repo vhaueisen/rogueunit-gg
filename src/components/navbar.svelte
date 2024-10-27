@@ -21,15 +21,41 @@
 	}
 
 	$: getPath($page.url.pathname);
+
+	let navOpen = false;
+	let hamburgerButton: HTMLButtonElement;
+
+	function clickOutside(node: HTMLElement): { destroy: () => void } {
+		const handleClick = (event: MouseEvent) => {
+			if (
+				navOpen &&
+				!node.contains(event.target as Node) &&
+				!hamburgerButton.contains(event.target as Node)
+			) {
+				navOpen = false;
+			}
+		};
+
+		document.addEventListener('click', handleClick, true);
+
+		return {
+			destroy() {
+				document.removeEventListener('click', handleClick, true);
+			}
+		};
+	}
 </script>
 
 <nav class="navbar">
-	<a class="nav-logo" href="/"> <img src="/images/logo-horizontal.png" alt="Rogue Unit Logo" /></a>
+	<a class="nav-logo" href="/">
+		<img src="/images/logo-horizontal.png" alt="Rogue Unit Logo" />
+	</a>
 
+	<!-- Desktop Navigation Links -->
 	<div class="nav-links">
 		{#each Object.keys(links) as link}
 			<li>
-				<a href={link} class:active={path == link}>
+				<a href={link} class:active={path == link} data-sveltekit-preload-data="hover">
 					{links[link]}
 				</a>
 				<span>&nbsp;</span>
@@ -37,6 +63,7 @@
 		{/each}
 	</div>
 
+	<!-- Desktop Icons -->
 	<div class="nav-icons">
 		{#each Object.keys(icons) as icon}
 			<a target="_blank" href={icons[icon]}>
@@ -44,7 +71,43 @@
 			</a>
 		{/each}
 	</div>
+
+	<button
+		class="hamburger"
+		on:click={() => (navOpen = !navOpen)}
+		class:open={navOpen}
+		bind:this={hamburgerButton}
+	>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+	</button>
 </nav>
+
+<!-- Mobile Navigation Menu -->
+<div class="mobile-nav {navOpen ? 'open' : ''}" use:clickOutside>
+	<ul>
+		{#each Object.keys(links) as link}
+			<li>
+				<a
+					href={link}
+					class:active={path == link}
+					data-sveltekit-preload-data="hover"
+					on:click={() => (navOpen = false)}
+				>
+					{links[link]}
+				</a>
+			</li>
+		{/each}
+	</ul>
+	<div class="mobile-nav-icons">
+		{#each Object.keys(icons) as icon}
+			<a target="_blank" href={icons[icon]}>
+				<img src={`/icons/${icon}.png`} alt={icon} />
+			</a>
+		{/each}
+	</div>
+</div>
 
 <style>
 	.navbar {
@@ -131,15 +194,133 @@
 		height: 24px;
 	}
 
+	.hamburger {
+		display: none;
+	}
+
+	.hamburger {
+		background: none;
+		border: none;
+		cursor: pointer;
+		width: 30px;
+		height: 25px;
+		position: relative;
+		margin-left: auto;
+		z-index: 1100;
+	}
+
+	.hamburger span {
+		display: block;
+		height: 3px;
+		width: 100%;
+		background: white;
+		margin-bottom: 5px;
+		position: relative;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.hamburger.open span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.open span:nth-child(1) {
+		transform: rotate(45deg);
+		position: absolute;
+		top: 40%;
+		left: 0;
+	}
+
+	.hamburger.open span:nth-child(3) {
+		transform: rotate(-45deg);
+		position: absolute;
+		left: 0;
+		top: 40%;
+	}
+
+	.mobile-nav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		background-color: var(--nav-background-color);
+		width: 60%;
+		height: 100%;
+		text-align: right;
+		padding: 4em 2em 2em 2em;
+		box-sizing: border-box;
+		z-index: 1000;
+		overflow-y: auto;
+		transition: all 0.3s ease-in-out;
+		transform: translateX(100%);
+		background-color: var(--primary-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.mobile-nav.open {
+		transform: translateX(0);
+	}
+
+	.mobile-nav ul {
+		flex-grow: 1;
+		align-content: center;
+	}
+
+	.mobile-nav ul li a.active {
+		color: var(--tertiary-color);
+	}
+
+	.mobile-nav .mobile-nav-icons {
+		align-items: flex-end;
+	}
+
+	.mobile-nav ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.mobile-nav li {
+		margin: 2em 0;
+		padding-bottom: 1em;
+		border-bottom: 1px solid white;
+		text-align: center;
+	}
+
+	.mobile-nav a {
+		color: white;
+		text-decoration: none;
+		font-size: 1.5em;
+	}
+
+	.mobile-nav-icons {
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+		margin: 0;
+	}
+
+	.mobile-nav-icons img {
+		width: 24px;
+		height: 24px;
+	}
+
 	@media (max-width: 768px) {
 		.nav-links,
 		.nav-icons {
 			display: none;
 		}
 
+		nav {
+			z-index: 1001;
+		}
+
 		.navbar {
 			padding: 0.5em 0.5em;
 			height: 3.5em;
+		}
+
+		.hamburger {
+			display: block;
 		}
 	}
 </style>

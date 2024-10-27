@@ -25,23 +25,47 @@
 			image: '/images/hyperlight-wings.png',
 			alt: 'Thumbnail do Hyperlight Wings.',
 			link: 'https://www.rogueunit.com/hyperlight-wings'
+		},
+		{
+			title: 'ROGUE UNIT',
+			subtitle: 'Hyperlight Wings',
+			image: '/images/hyperlight-wings.png',
+			alt: 'Thumbnail do Hyperlight Wings.',
+			link: 'https://www.rogueunit.com/hyperlight-wings'
+		},
+		{
+			title: 'ROGUE UNIT',
+			subtitle: 'Hyperlight Wings',
+			image: '/images/hyperlight-wings.png',
+			alt: 'Thumbnail do Hyperlight Wings.',
+			link: 'https://www.rogueunit.com/hyperlight-wings'
 		}
 	];
 
-	let currentSlide = 1;
-	let previousIndex = 0;
+	let currentSlide = 0;
+	let dir = 1;
 	let interval: any;
 
 	function nextSlide() {
-		previousIndex = currentSlide;
+		dir = 1;
 		currentSlide = (currentSlide + 1) % slides.length;
+		if (currentSlide === 0) dir = -1;
 		reset();
 	}
 
 	function previousSlide() {
-		previousIndex = currentSlide;
+		dir = -1;
 		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+		if (currentSlide === slides.length - 1) dir = 1;
 		reset();
+	}
+
+	function targetIn() {
+		return { x: dir * 500, duration: 500 };
+	}
+
+	function targetOut() {
+		return { x: -dir * 500, duration: 500 };
 	}
 
 	function reset() {
@@ -51,15 +75,9 @@
 		}, 5000);
 	}
 
-	onMount(() => {
-		reset();
+	onMount(() => {});
 
-		return () => clearInterval(interval);
-	});
-
-	onDestroy(() => {
-		clearInterval(interval);
-	});
+	onDestroy(() => {});
 </script>
 
 <div class="container">
@@ -71,7 +89,8 @@
 				{#if currentSlide === index}
 					<div
 						class="slide"
-						transition:fly={{ x: currentSlide > previousIndex ? 500 : -500, duration: 500 }}
+						in:fly={targetIn()}
+						out:fly={targetOut()}
 						style="background-image: url({slide.image});"
 					>
 						<div class="experience-type" class:branded={slide.branded}>
