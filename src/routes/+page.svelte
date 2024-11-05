@@ -2,9 +2,59 @@
 	import Header from '../components/header.svelte';
 	import Callout from '../components/home/callout.svelte';
 	import ScrollIndicator from '../components/scroll-indicator.svelte';
-	import Carousel from '../components/home/news-carousel.svelte';
+	import Carousel from '../components/carousel.svelte';
+	import NewsSlide from '../components/home/news-slide.svelte';
 	import Invite from '../components/home/invite.svelte';
 	import Video from '../components/video.svelte';
+
+	let Slides = [
+		{
+			image: '/news/marcas-conectadas.webp',
+			alt: 'Filipe Lucas, CEO da Rogue Unit',
+			quote: 'Marcas Conectadas Tech: Filipe Lucas',
+			description:
+				'Conheça os segredos da conexão entre marcas e o universo gamer! A entrevista da nossa série "Marcas Conectadas Tech" com Filipe Lucas, CEO da Rogue Unit, revela como a inovação e o Marketing de Influência estão transformando a forma como as marcas se relacionam com as novas gerações. ',
+			link: 'https://bluestudio.estadao.com.br/noticias/aspas/marcas-conectadas-tech-filipe-lucasmarcas/?utm_source=feed&utm_medium=marcas_conectadas_tech&utm_campaign=Filipe_RogueUnit&utm_id=linkedin',
+			linkText: 'Leia mais'
+		},
+		{
+			image: '/news/plataformas-ugc.webp',
+			alt: 'Homem jogando videogame',
+			quote:
+				'Plataformas de jogos UGC: A convergência entre Web 2.0, criatividade e a publicidade para marcas',
+			description:
+				'O termo web 2.0 é utilizado para descrever a segunda geração da internet, onde o conteúdo a ser consumido pelos usuários passou a ser criado por seus próprios consumidores (UGC - user generated content), em comunidades virtuais.',
+			link: 'https://www.tecmundo.com.br/voxel/286520-plataformas-jogos-ugc-convergencia-entre-web-2-0-criatividade-publicidade-marcas.htm',
+			linkText: 'Leia mais'
+		},
+		{
+			image: '/news/cabeca-de-lab.jpg',
+			alt: 'Foto dos participantes deste Podcast',
+			quote: 'Desenvolvimento de jogos no Roblox Studio',
+			description:
+				'Neste episódio, mergulharemos no universo do desenvolvimento de jogos no Roblox. Conversaremos sobre o impacto da linguagem Lua e como otimizar jogos para dispositivos móveis. Nossos convidados compartilham suas experiências com a plataforma Roblox Studio, além de compartilharem dicas valiosas para jovens criadores.',
+			link: 'https://open.spotify.com/episode/4YYmjiyVx2tVAQQQSA9V7W',
+			linkText: 'Escutar'
+		},
+		{
+			image: '/news/loud-league.png',
+			alt: 'Foto da Liga Loud: Lendas do Futebol',
+			quote: 'Rogue Unit é a responsável pela estreia da Loud no Roblox',
+			description:
+				'A iniciativa consiste em um mundo gratuito de experiências que traz uma disputa de futebol para todos os usuários do game. No espaço, eles podem testar habilidades contra outros players, disputar partidas, subir nas classificações e reivindicar o topo do pódio da competição.',
+			link: 'https://propmark.com.br/rogue-unit-e-a-responsavel-pela-estreia-da-loud-no-roblox/',
+			linkText: 'Leia mais'
+		},
+		{
+			image: '/news/roblox-devs.webp',
+			alt: 'Thumbnail da liga Loud: Lendas do Futebol',
+			quote: 'Roblox quer se aproximar dos desenvolvedores brasileiros',
+			description:
+				'Roblox é uma das maiores plataformas de imersão e conexão, onde cada experiência é criada por e para usuários de todo o mundo. Atualmente, ela possui mais de 79,5 milhões de usuários ativos diários, sendo especialmente popular entre a Geração Z e a Geração Alpha.',
+			link: 'https://www.terra.com.br/gameon/plataformas-e-consoles/roblox-quer-se-aproximar-dos-desenvolvedores-brasileiros,629574ffa401bb6354b3fd3e2adbb9931my2ntjd.html',
+			linkText: 'Leia mais'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -52,6 +102,6 @@
 
 <Callout />
 
-<Carousel />
+<Carousel Slide={NewsSlide} Content={Slides} Title="Na Mídia"/>
 
 <Invite />

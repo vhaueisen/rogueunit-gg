@@ -1,9 +1,36 @@
 <script>
 	import Header from '../../components/header.svelte';
 	import ScrollIndicator from '../../components/scroll-indicator.svelte';
-	import Carousel from '../../components/work/carousel.svelte';
+	import Carousel from '../../components/carousel.svelte';
 	import Article from '../../components/work/article.svelte';
 	import Team from '../../components/work/team.svelte';
+	import ProjectSlide from '../../components/work/project-slide.svelte';
+
+	let Projects = [
+		{
+			title: 'LOUD',
+			subtitle: 'Liga Loud: Lendas do Futebol',
+			image: '/images/loud-league.png',
+			alt: 'Thumbnail da Liga Loud: Lendas do Futebol.',
+			link: 'https://www.roblox.com/games/15505318000/LOUD-League-Soccer-Legends',
+			branded: true
+		},
+		{
+			title: 'SPORTV',
+			subtitle: 'Sportv Land',
+			image: '/images/sportv-land.jpg',
+			alt: 'Thumbnail do Sportv Land.',
+			link: 'https://www.roblox.com/games/11512530631/SportvLand',
+			branded: true
+		},
+		{
+			title: 'ROGUE UNIT',
+			subtitle: 'Hyperlight Wings',
+			image: '/images/hyperlight-wings.png',
+			alt: 'Thumbnail do Hyperlight Wings.',
+			link: 'https://www.roblox.com/games/6882790797/Open-Alpha-Hyperlight-Wings'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -42,7 +69,7 @@
 
 <ScrollIndicator />
 
-<Carousel />
+<Carousel Slide={ProjectSlide} Content={Projects} Title="Experiências imersivas" />
 
 <Article />
 
