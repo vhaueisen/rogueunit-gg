@@ -72,8 +72,9 @@
 	.description {
 		margin-top: 1em;
 		text-overflow: clip;
-		max-height: 100px;
+		max-height: 108px;
 		overflow: hidden;
+		line-height: 18px;
 	}
 
 	.link {
@@ -129,7 +130,7 @@
 
 		.description {
 			padding: 1em 4em;
-			max-height: 38px;
+			max-height: 54px;
 			margin: 0;
 		}
 

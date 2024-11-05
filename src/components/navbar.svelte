@@ -193,19 +193,18 @@
 		width: 24px;
 		height: 24px;
 	}
-
+	
 	.hamburger {
 		display: none;
-	}
-
-	.hamburger {
 		background: none;
 		border: none;
 		cursor: pointer;
 		width: 30px;
 		height: 25px;
 		position: relative;
-		margin-left: auto;
+		padding: 0;
+		margin: 0 auto;
+		margin-right: 1em;
 		z-index: 1100;
 	}
 

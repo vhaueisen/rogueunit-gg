@@ -1,6 +1,5 @@
 <script>
 	import { enhance } from '$app/forms';
-	import ScrollIndicator from '../../components/scroll-indicator.svelte';
 	/** @type {import('./$types').ActionData} */
 	export let form;
 </script>
@@ -37,49 +36,56 @@
 	<meta name="twitter:image" content="/images/contact-background.jpg" />
 </svelte:head>
 
-<div class="contact-title">
-	<h4>Como podemos te ajudar hoje?</h4>
-	<!-- <ScrollIndicator /> -->
+<div class="wrapper">
+	<div class="contact-title">
+		<h4>Como podemos te ajudar hoje?</h4>
+	</div>
+
+	{#if form?.valid !== true}
+		<form
+			method="POST"
+			action="?/contact"
+			use:enhance={() => {
+				return async ({ update }) => {
+					update({ reset: false });
+				};
+			}}
+		>
+			<div>
+				<div>
+					<label for="name">Nome:</label>
+					<input type="text" name="name" placeholder="Fulano da Silva" required />
+				</div>
+				<div>
+					<label for="email">E-mail:</label>
+					<input type="email" name="email" placeholder="example@example.com" required />
+				</div>
+			</div>
+
+			<div>
+				<label for="message">Mensagem:</label>
+				<textarea name="message" placeholder="Escreva sua mensagem aqui :)" rows="7" required
+				></textarea>
+				<button>Enviar</button>
+			</div>
+		</form>
+	{/if}
+
+	{#if form?.valid === true}
+		<div class="speech-bubble">
+			Seu contato foi enviado e logo será tratado por nossa equipe!<br />:)
+		</div>
+	{/if}
+	{#if form?.valid === false}<p class="error">{form.text}</p>{/if}
 </div>
 
-{#if form?.valid !== true}
-	<form
-		method="POST"
-		action="?/contact"
-		use:enhance={() => {
-			return async ({ update }) => {
-				update({ reset: false });
-			};
-		}}
-	>
-		<div>
-			<div>
-				<label for="name">Nome:</label>
-				<input type="text" name="name" placeholder="Fulano da Silva" required />
-			</div>
-			<div>
-				<label for="email">E-mail:</label>
-				<input type="email" name="email" placeholder="example@example.com" required />
-			</div>
-		</div>
-
-		<div>
-			<label for="message">Mensagem:</label>
-			<textarea name="message" placeholder="Escreva sua mensagem aqui :)" rows="7" required
-			></textarea>
-			<button>Enviar</button>
-		</div>
-	</form>
-{/if}
-
-{#if form?.valid === true}
-	<div class="speech-bubble">
-		Seu contato foi enviado e logo será tratado por nossa equipe!<br />:)
-	</div>
-{/if}
-{#if form?.valid === false}<p class="error">{form.text}</p>{/if}
-
 <style>
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100% - 176px);
+	}
+
 	.contact-title {
 		font-size: 3rem;
 		font-weight: bold;
@@ -138,6 +144,7 @@
 		max-width: 1280px;
 		padding: 2em;
 		margin: 3em auto;
+		flex-grow: 1;
 	}
 
 	label {

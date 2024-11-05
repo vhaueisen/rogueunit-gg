@@ -155,13 +155,15 @@
 	}
 
 	.slide-indicators button {
-		width: 1rem;
-		height: 1rem;
+		width: 16px;
+		height: 16px;
 		border-radius: 50%;
 		background-color: #ccc;
 		cursor: pointer;
 		transition: background-color 0.3s;
 		border: none;
+		padding: 0;
+		margin: 0;
 	}
 
 	.slide-indicators button:hover,
