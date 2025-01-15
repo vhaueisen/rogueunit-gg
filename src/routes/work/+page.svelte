@@ -45,7 +45,7 @@
 	<title>Experiências de Marca no Roblox | Rogue Unit</title>
 	<meta
 		name="description"
-		content="A Rogue Unit conecta marcas ao público jovem do universo Roblox. Primeiro estúdio brasileiro acelerado pela Roblox, criamos campanhas, itens e experiências imersivas para marcas como Sportv, LOUD. Transforme sua marca em uma experiência inesquecível!"
+		content="A Rogue Unit conecta marcas ao público jovem do universo Roblox. Primeiro estúdio brasileiro acelerado pela Roblox, criamos campanhas, itens e experiências imersivas para marcas como Nestlé, Sportv, LOUD. Transforme sua marca em uma experiência inesquecível!"
 	/>
 
 	<meta
@@ -56,7 +56,7 @@
 	<meta property="og:title" content="Conecte Sua Marca ao universo Roblox com a Rogue Unit" />
 	<meta
 		property="og:description"
-		content="Rogue Unit, o primeiro estúdio brasileiro acelerado pela Roblox, cria experiências e campanhas que engajam o público jovem no Roblox. Marcas como Sportv e LOUD já fazem parte dessa revolução digital – junte-se a elas!"
+		content="Rogue Unit, o primeiro estúdio brasileiro acelerado pela Roblox, cria experiências e campanhas que engajam o público jovem no Roblox. Marcas como Nestlé, Sportv e LOUD já fazem parte dessa revolução digital – junte-se a elas!"
 	/>
 	<meta property="og:image" content="/images/roblox-characters.png" />
 	<meta property="og:url" content="https://www.rogueunit.gg/work" />
@@ -66,7 +66,7 @@
 	<meta name="twitter:title" content="Conecte Sua Marca ao universo Roblox com a Rogue Unit" />
 	<meta
 		name="twitter:description"
-		content="Rogue Unit, o primeiro estúdio brasileiro acelerado pela Roblox, cria experiências e campanhas que engajam o público jovem no Roblox. Marcas como Sportv e LOUD já fazem parte dessa revolução digital – junte-se a elas!"
+		content="Rogue Unit, o primeiro estúdio brasileiro acelerado pela Roblox, cria experiências e campanhas que engajam o público jovem no Roblox. Marcas como Nestlé, Sportv e LOUD já fazem parte dessa revolução digital – junte-se a elas!"
 	/>
 	<meta name="twitter:image" content="/images/roblox-characters.png" />
 </svelte:head>

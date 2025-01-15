@@ -70,7 +70,7 @@
 	<title>Rogue Unit - Experiências Digitais para Marcas no Roblox</title>
 	<meta
 		name="description"
-		content="A Rogue Unit é especialista em criar experiências digitais imersivas no Roblox para marcas conectarem-se ao público jovem. Conheça nossos projetos de sucesso com LOUD e Sportv, que transformam storytelling e engajamento em resultados."
+		content="A Rogue Unit é especialista em criar experiências digitais imersivas no Roblox para marcas conectarem-se ao público jovem. Conheça nossos projetos de sucesso com Nestlé, Sportv e LOUD, que transformam storytelling e engajamento em resultados."
 	/>
 	<meta
 		name="keywords"
@@ -90,7 +90,7 @@
 	<meta name="twitter:title" content="Rogue Unit - Experiências Digitais para Marcas no Roblox" />
 	<meta
 		name="twitter:description"
-		content="Transformamos marcas em experiências digitais no Roblox. Conheça nossos projetos com LOUD e Sportv."
+		content="Transformamos marcas em experiências digitais no Roblox. Conheça nossos projetos com Nestlé, Sportv e LOUD."
 	/>
 	<meta name="twitter:image" content="/images/rogue-logo-512.jpg" />
 </svelte:head>
