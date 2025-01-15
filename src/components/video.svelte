@@ -1,15 +1,7 @@
 <div class="video">
-		<video
-			autoplay
-			loop
-			poster="/images/rogue-teaser-poster.png"
-			muted
-			playsinline
-			>
-			<source
-				src="/videos/rogue-teaser-video.mp4"
-			/>
-		</video>
+	<video autoplay loop poster="/images/rogue-teaser-poster.png" muted playsinline>
+		<source src="/videos/rogue-teaser-video_2.mp4" />
+	</video>
 </div>
 
 <style>

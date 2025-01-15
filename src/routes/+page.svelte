@@ -9,6 +9,15 @@
 
 	let Slides = [
 		{
+			image: '/news/forbes-mundo-surpresa.webp',
+			alt: 'Captura do jogo "Mundo Surpresa"',
+			quote: 'Nestlé Relança o Surpresa, Ícone dos Anos 1990, em Um Jogo no Roblox',
+			description:
+				'O Roblox está entre as plataformas de interação mais acessadas do mundo, em média, possui mais de 90 milhões de pessoas conectadas diariamente. No ano passado, ela rendeu mais de US$2,8 bilhões em vendas.',
+			link: 'https://forbes.com.br/forbes-mkt/2025/01/nestle-relanca-o-surpresa-icone-dos-anos-1990-em-um-jogo-no-roblox/',
+			linkText: 'Leia mais'
+		},
+		{
 			image: '/news/marcas-conectadas.webp',
 			alt: 'Filipe Lucas, CEO da Rogue Unit',
 			quote: 'Marcas Conectadas Tech: Filipe Lucas',
@@ -102,6 +111,6 @@
 
 <Callout />
 
-<Carousel Slide={NewsSlide} Content={Slides} Title="Na Mídia"/>
+<Carousel Slide={NewsSlide} Content={Slides} Title="Na Mídia" />
 
 <Invite />

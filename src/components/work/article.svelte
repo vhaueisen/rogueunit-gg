@@ -11,7 +11,7 @@
 			title: 'Integrações de Marca',
 			subtitle: 'Engaje uma Nova Geração de Fãs',
 			description:
-				'A integração de marcas em jogos na Roblox oferece uma oportunidade inovadora para se conectarem com as novas gerações de forma imersiva e interativa. No universo do Roblox, a média diária de engajamento gira em torno de 2,3 horas por usuário e as marcas podem criar ambientes exclusivos, lançar itens virtuais e promover eventos temporários ou permanentes para engajar o público de forma natural. Esse tipo de experiência transforma o branding em algo vivo e personalizável, que acompanha os jogadores durante suas jornadas digitais​.',
+				'A integração de marcas em jogos na Roblox oferece uma oportunidade inovadora de conexão com as novas gerações de forma imersiva e interativa. No universo da Roblox, a média diária de engajamento gira em torno de 2,3 horas por usuário e as marcas podem criar ambientes exclusivos, lançar itens virtuais e promover eventos temporários ou permanentes para engajar o público de forma natural. Esse tipo de experiência transforma o branding em algo vivo e personalizável, que acompanha os jogadores durante suas jornadas digitais​.',
 			image: '/images/roblox-characters.png',
 			alt: 'Alguma legenda aqui'
 		},
@@ -19,7 +19,7 @@
 			title: 'UGC',
 			subtitle: 'Impulsione sua Marca com Itens Virtuais',
 			description:
-				'Integrar UGC ao universo da sua marca no é uma estratégia poderosa para fortalecer laços autênticos com o público jovem. No Roblox, usuários têm a oportunidade de personalizar e criar itens que representam sua individualidade, transformando-se em verdadeiros embaixadores da marca. Ao permitir que os consumidores gerem conteúdo em torno de seus produtos, sua marca se torna uma parte ativa e significativa de suas experiências diárias, impulsionando engajamento e visibilidade de maneira orgânica.',
+				'Integrar UGCs ao universo da sua marca é uma estratégia poderosa para fortalecer laços autênticos com o público jovem. Na Roblox, usuários têm a oportunidade de personalizar e criar itens que representam sua individualidade, transformando-se em verdadeiros embaixadores da marca. Ao permitir que os consumidores gerem conteúdo em torno de seus produtos, sua marca se torna uma parte ativa e significativa de suas experiências diárias, impulsionando engajamento e visibilidade de maneira orgânica.',
 			image: '/images/roblox-characters.png',
 			alt: 'Alguma legenda aqui'
 		}

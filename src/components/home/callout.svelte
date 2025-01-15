@@ -6,7 +6,7 @@
 	<div class="callout-content">
 		<img src="/images/roblox-characters.png" alt="Roblox Characters" class="callout-image" />
 		<p>
-			Somos líder em criar experiências únicas no <a
+			Somos líderes em criar experiências únicas no <a
 				href="https://roblox.com"
 				class="highlight"
 				target="_blank">Roblox</a

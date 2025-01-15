@@ -8,6 +8,14 @@
 
 	let Projects = [
 		{
+			title: 'NESTLÉ',
+			subtitle: 'Mundo Surpresa',
+			image: '/images/mundo-surpresa.webp',
+			alt: 'Thumbnail do Neslté Mundo Surpresa.',
+			link: 'https://www.roblox.com/games/16187824627/Mundo-Surpresa',
+			branded: true
+		},
+		{
 			title: 'LOUD',
 			subtitle: 'Liga Loud: Lendas do Futebol',
 			image: '/images/loud-league.png',
