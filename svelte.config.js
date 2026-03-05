@@ -1,18 +1,24 @@
-import adapter from '@sveltejs/adapter-node';
+import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+    preprocess: vitePreprocess(),
 
-	kit: {
-		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter({})
-	}
+    kit: {
+        adapter: adapterStatic({
+            // Use a fallback page so unprerendered routes (e.g. /contact) are
+            // served client-side as an SPA. Note: form actions in +page.server.ts
+            // will NOT work on GitHub Pages (no backend). Replace the contact
+            // form with a client-side service (Formspree, EmailJS, etc.) if needed.
+            fallback: '404.html'
+        }),
+        paths: {
+            // Set BASE_PATH env variable in CI to match the repository name, e.g.
+            // BASE_PATH=/rogueunit-gg for vhaueisen.github.io/rogueunit-gg
+            base: process.env.BASE_PATH ?? ''
+        }
+    }
 };
 
 export default config;
