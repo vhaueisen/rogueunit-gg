@@ -5,12 +5,13 @@
 	import Article from '../../components/work/article.svelte';
 	import Team from '../../components/work/team.svelte';
 	import ProjectSlide from '../../components/work/project-slide.svelte';
+	import { base } from '$app/paths';
 
 	let Projects = [
 		{
 			title: 'NESTLÉ',
 			subtitle: 'Mundo Surpresa',
-			image: '/images/mundo-surpresa.webp',
+			image: `${base}/images/mundo-surpresa.webp`,
 			alt: 'Thumbnail do Neslté Mundo Surpresa.',
 			link: 'https://www.roblox.com/games/16187824627/Mundo-Surpresa',
 			branded: true
@@ -18,7 +19,7 @@
 		{
 			title: 'LOUD',
 			subtitle: 'Liga Loud: Lendas do Futebol',
-			image: '/images/loud-league.png',
+			image: `${base}/images/loud-league.png`,
 			alt: 'Thumbnail da Liga Loud: Lendas do Futebol.',
 			link: 'https://www.roblox.com/games/15505318000/LOUD-League-Soccer-Legends',
 			branded: true
@@ -26,7 +27,7 @@
 		{
 			title: 'SPORTV',
 			subtitle: 'Sportv Land',
-			image: '/images/sportv-land.jpg',
+			image: `${base}/images/sportv-land.jpg`,
 			alt: 'Thumbnail do Sportv Land.',
 			link: 'https://www.roblox.com/games/11512530631/SportvLand',
 			branded: true
@@ -34,7 +35,7 @@
 		{
 			title: 'ROGUE UNIT',
 			subtitle: 'Hyperlight Wings',
-			image: '/images/hyperlight-wings.png',
+			image: `${base}/images/hyperlight-wings.png`,
 			alt: 'Thumbnail do Hyperlight Wings.',
 			link: 'https://www.roblox.com/games/6882790797/Open-Alpha-Hyperlight-Wings'
 		}

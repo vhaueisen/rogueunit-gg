@@ -1,21 +1,23 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	let team = [
 		{
 			name: 'Daniel Piassi',
 			role: 'CIO e Roblox Tech Lead',
-			image: '/icons/Icon_Daniel.png',
+			image: `${base}/icons/Icon_Daniel.png`,
 			linkedin: 'https://www.linkedin.com/in/dpiassi'
 		},
 		{
 			name: 'Filipe Lucas',
 			role: 'CEO e Diretor Criativo',
-			image: '/icons/Icon_Filipe.png',
+			image: `${base}/icons/Icon_Filipe.png`,
 			linkedin: 'https://www.linkedin.com/in/filipelucasart'
 		},
 		{
 			name: 'Vitor Ruas',
 			role: 'CTO',
-			image: '/icons/Icon_Vitor.png',
+			image: `${base}/icons/Icon_Vitor.png`,
 			linkedin: 'https://www.linkedin.com/in/vitor-ruas'
 		}
 	];

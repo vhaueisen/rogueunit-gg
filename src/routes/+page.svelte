@@ -6,10 +6,11 @@
 	import NewsSlide from '../components/home/news-slide.svelte';
 	import Invite from '../components/home/invite.svelte';
 	import Video from '../components/video.svelte';
+	import { base } from '$app/paths';
 
 	let Slides = [
 		{
-			image: '/news/forbes-mundo-surpresa.webp',
+			image: `${base}/news/forbes-mundo-surpresa.webp`,
 			alt: 'Captura do jogo "Mundo Surpresa"',
 			quote: 'Nestlé Relança o Surpresa, Ícone dos Anos 1990, em Um Jogo no Roblox',
 			description:
@@ -18,7 +19,7 @@
 			linkText: 'Leia mais'
 		},
 		{
-			image: '/news/marcas-conectadas.webp',
+			image: `${base}/news/marcas-conectadas.webp`,
 			alt: 'Filipe Lucas, CEO da Rogue Unit',
 			quote: 'Marcas Conectadas Tech: Filipe Lucas',
 			description:
@@ -27,7 +28,7 @@
 			linkText: 'Leia mais'
 		},
 		{
-			image: '/news/plataformas-ugc.webp',
+			image: `${base}/news/plataformas-ugc.webp`,
 			alt: 'Homem jogando videogame',
 			quote:
 				'Plataformas de jogos UGC: A convergência entre Web 2.0, criatividade e a publicidade para marcas',
@@ -37,7 +38,7 @@
 			linkText: 'Leia mais'
 		},
 		{
-			image: '/news/cabeca-de-lab.jpg',
+			image: `${base}/news/cabeca-de-lab.jpg`,
 			alt: 'Foto dos participantes deste Podcast',
 			quote: 'Desenvolvimento de jogos no Roblox Studio',
 			description:
@@ -46,7 +47,7 @@
 			linkText: 'Escutar'
 		},
 		{
-			image: '/news/loud-league.png',
+			image: `${base}/news/loud-league.png`,
 			alt: 'Foto da Liga Loud: Lendas do Futebol',
 			quote: 'Rogue Unit é a responsável pela estreia da Loud no Roblox',
 			description:
@@ -55,7 +56,7 @@
 			linkText: 'Leia mais'
 		},
 		{
-			image: '/news/roblox-devs.webp',
+			image: `${base}/news/roblox-devs.webp`,
 			alt: 'Thumbnail da liga Loud: Lendas do Futebol',
 			quote: 'Roblox quer se aproximar dos desenvolvedores brasileiros',
 			description:
