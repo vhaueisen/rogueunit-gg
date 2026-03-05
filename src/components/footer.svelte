@@ -1,20 +1,24 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <footer>
-	<a class="footer-logo" href="/">
-		<img src="/images/logo-horizontal.png" alt="Rogue Unit Logo" />
+	<a class="footer-logo" href="{base}/">
+		<img src="{base}/images/logo-horizontal.png" alt="Rogue Unit Logo" />
 	</a>
-	<a class="link" href="/contact">Fale com a gente!</a>
+	<a class="link" href="{base}/contact">Fale com a gente!</a>
 	<div class="footer-icons">
 		<a target="_blank" href="https://www.roblox.com/pt/groups/10352289/rogueunit-gg#!/about">
-			<img src="/icons/roblox.png" alt="Roblox" />
+			<img src="{base}/icons/roblox.png" alt="Roblox" />
 		</a>
 		<a target="_blank" href="https://www.instagram.com/rogueunit.gg/">
-			<img src="/icons/instagram.png" alt="Instagram" />
+			<img src="{base}/icons/instagram.png" alt="Instagram" />
 		</a>
 		<a target="_blank" href="https://www.tiktok.com/@rogueunitgg">
-			<img src="/icons/tiktok.png" alt="TikTok" />
+			<img src="{base}/icons/tiktok.png" alt="TikTok" />
 		</a>
 		<a target="_blank" href="https://br.linkedin.com/company/rogueunit"
-			><img src="/icons/linkedin.png" alt="LinkedIn" />
+			><img src="{base}/icons/linkedin.png" alt="LinkedIn" />
 		</a>
 	</div>
 </footer>

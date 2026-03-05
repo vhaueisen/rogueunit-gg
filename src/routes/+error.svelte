@@ -1,18 +1,19 @@
 <script lang="ts">
 	import Button from './../components/button.svelte';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 </script>
 
 <div class="content">
 	<h1>{$page.status}</h1>
-	<img src="/icons/error.png" alt="Error" />
+	<img src="{base}/icons/error.png" alt="Error" />
 	<h3>Ooops...</h3>
 	<p>Parece que você está perdido.</p>
 
 	<div class="btn-row">
 		<Button href="javascript:history.back()" secondary>Voltar</Button>
 		<div class="spacer" />
-		<Button href="/">Início</Button>
+		<Button href="{base}/">Início</Button>
 	</div>
 </div>
 
@@ -23,7 +24,7 @@
 		color: var(--quaternary-color);
 	}
 
-	h1{
+	h1 {
 		opacity: 0.3;
 	}
 

@@ -1,6 +1,10 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <div class="video">
-	<video autoplay loop poster="/images/rogue-teaser-poster.png" muted playsinline>
-		<source src="/videos/rogue-teaser-video_2.mp4" />
+	<video autoplay loop poster="{base}/images/rogue-teaser-poster.png" muted playsinline>
+		<source src="{base}/videos/rogue-teaser-video_2.mp4" />
 	</video>
 </div>
 

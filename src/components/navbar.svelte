@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	let path: string = '/';
 
@@ -16,11 +17,11 @@
 		linkedin: 'https://br.linkedin.com/company/rogueunit'
 	};
 
-	function getPath(currentPath: string) {
-		path = currentPath;
+	function getPath(routeId: string | null) {
+		path = routeId ?? '/';
 	}
 
-	$: getPath($page.url.pathname);
+	$: getPath($page.route.id);
 
 	let navOpen = false;
 	let hamburgerButton: HTMLButtonElement;
@@ -47,15 +48,15 @@
 </script>
 
 <nav class="navbar">
-	<a class="nav-logo" href="/">
-		<img src="/images/logo-horizontal.png" alt="Rogue Unit Logo" />
+	<a class="nav-logo" href="{base}/">
+		<img src="{base}/images/logo-horizontal.png" alt="Rogue Unit Logo" />
 	</a>
 
 	<!-- Desktop Navigation Links -->
 	<div class="nav-links">
 		{#each Object.keys(links) as link}
 			<li>
-				<a href={link} class:active={path == link} data-sveltekit-preload-data="hover">
+				<a href="{base}{link}" class:active={path == link} data-sveltekit-preload-data="hover">
 					{links[link]}
 				</a>
 				<span>&nbsp;</span>
@@ -67,7 +68,7 @@
 	<div class="nav-icons">
 		{#each Object.keys(icons) as icon}
 			<a target="_blank" href={icons[icon]}>
-				<img src={`/icons/${icon}.png`} alt={icon} />
+				<img src="{base}/icons/{icon}.png" alt={icon} />
 			</a>
 		{/each}
 	</div>
@@ -90,7 +91,7 @@
 		{#each Object.keys(links) as link}
 			<li>
 				<a
-					href={link}
+					href="{base}{link}"
 					class:active={path == link}
 					data-sveltekit-preload-data="hover"
 					on:click={() => (navOpen = false)}
@@ -103,7 +104,7 @@
 	<div class="mobile-nav-icons">
 		{#each Object.keys(icons) as icon}
 			<a target="_blank" href={icons[icon]}>
-				<img src={`/icons/${icon}.png`} alt={icon} />
+				<img src="{base}/icons/{icon}.png" alt={icon} />
 			</a>
 		{/each}
 	</div>
@@ -193,7 +194,7 @@
 		width: 24px;
 		height: 24px;
 	}
-	
+
 	.hamburger {
 		display: none;
 		background: none;

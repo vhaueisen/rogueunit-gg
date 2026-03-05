@@ -1,16 +1,17 @@
 <script>
 	import Button from '../button.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <div class="container">
 	<div class="speech-bubble">
 		<h4>Faça parte do nosso squad!</h4>
 		<div class="btn-row">
-			<Button href="/contact" btnClass="btn">Enviar e-mail</Button>
+			<Button href="{base}/contact" btnClass="btn">Enviar e-mail</Button>
 		</div>
 	</div>
 	<div class="img-container">
-		<img src="/images/invite-background.png" alt="Convite" />
+		<img src="{base}/images/invite-background.png" alt="Convite" />
 	</div>
 </div>
 

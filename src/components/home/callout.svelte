@@ -1,10 +1,11 @@
 <script>
 	import Button from '../button.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <section class="callout-section">
 	<div class="callout-content">
-		<img src="/images/roblox-characters.png" alt="Roblox Characters" class="callout-image" />
+		<img src="{base}/images/roblox-characters.png" alt="Roblox Characters" class="callout-image" />
 		<p>
 			Somos líderes em criar experiências únicas no <a
 				href="https://roblox.com"
@@ -14,7 +15,7 @@
 			em parte ativa do universo de jogos com campanhas, itens e espaços personalizados que atraem e
 			fidelizam fãs.
 		</p>
-		<Button href="/work">SAIBA MAIS</Button>
+		<Button href="{base}/work">SAIBA MAIS</Button>
 	</div>
 	<div class="trapezoid"></div>
 </section>
